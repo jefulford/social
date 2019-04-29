@@ -1,0 +1,375 @@
+@import url("https://use.fontawesome.com/releases/v5.0.13/css/all.css");
+
+:root {
+	--primary: #FFF5F8;
+	--secondary: #CCC4C6;
+	--tertiary: #7F7A7C;
+	--accent: #FF7A7C;
+	--hover: #FF494B;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #232323;
+}
+#login {
+	display: none;
+}
+#content {
+	width: 400px;
+	height: 600px;
+	background-color: var(--secondary);
+	margin: 100px auto;
+}
+#sidebar {
+	width: 60px;
+	height: 600px;
+	background-color: var(--primary);
+	color: var(--tertiary);
+}
+#sidebar i {
+	margin: 10px auto;
+	text-align: center;
+	width: 60px;
+	height: 30px;
+	font-size: 25px;
+	line-height: 30px;
+	cursor: hand;
+	cursor: pointer;
+}
+#sidebar i:hover {
+	color: var(--accent);
+	transform: rotate(5deg);
+}
+#sidebar #user-image {
+	margin: 20px auto;
+	text-align: center;
+	width: 60px;
+	height: 50px;
+	font-size: 40px;
+	line-height: 50px; 
+}
+#sidebar #post {
+	margin: 10px auto;
+	text-align: center;
+	width: 60px;
+	padding-top: 240px;
+	height: 30px;
+	font-size: 35px;
+	line-height: 30px;
+	color: var(--accent);
+}
+#sidebar #post:hover {
+	color: var(--hover);
+	transform: none;
+}
+
+#post-pop-up {
+	display: none;
+	background-color: var(--accent);
+	height: 300px;
+	width: 500px;
+	position: absolute;
+	top: 200px;
+	left: 600px;
+}
+#close-post-pop-up {
+	font-size: 20px;
+	height: 40px;
+	width: 488px;
+	padding-right: 12px;
+	line-height: 40px;
+	text-align: right;
+	cursor: hand;
+	cursor: pointer;
+}
+#close-post-pop-up:hover {
+	color: var(--tertiary);
+
+}
+#post-input {
+	background-color: var(--primary);
+	border: 4px solid var(--accent);
+	border-radius: 6px;
+	margin: 10px auto;
+
+	width: 400px;
+
+	height: 160px;
+	margin: 0px 35px;
+	padding: 10px;
+
+	font-family: Helvetica Neue;
+	font-weight: 300;
+	font-size: 18px;
+	color: var(--tertiary);
+	resize: none;
+}
+#post-input:focus {
+	border: 4px solid var(--tertiary);
+}
+#submit-post {
+	background-color: var(--primary);
+	border: 4px solid var(--accent);
+	height: 40px;
+	width: 150px;
+	margin: 10px 308px 0px;
+	border-radius: 20px;
+
+	font-family: Avenir;
+	font-weight: 300;
+	font-size: 18px;
+	cursor: hand;
+	cursor: pointer;
+}
+#submit-post:hover {
+	color: var(--hover);
+	/*box-shadow: 0 0 4px grey;*/
+	border: 4px solid var(--tertiary);
+
+}
+#delete-post {
+	color: var(--primary);
+	font-size: 24px;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 36px;
+	top: 250px;
+	cursor: hand;
+	cursor: pointer;
+}
+#save-post {
+	color: var(--primary);
+	font-size: 24px;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 76px;
+	top: 250px;
+	cursor: hand;
+	cursor: pointer;
+}
+#delete-post:hover, #save-post:hover {
+	color: var(--tertiary);
+}
+
+/*NOTIFICATION*/
+#notification {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 0px;
+
+	font-family: Avenir;
+	font-weight: 800;
+	line-height: 40px;
+	text-align: right;
+	list-style: none;
+}
+.single-notification {
+	background-color: var(--accent);
+	width: auto;
+	height: 40px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	padding: 20px;
+}
+
+/*CENTRAL PANES*/
+#central-pane {
+	width: 340px;
+	height: 600px;
+	margin-left: 60px;
+	position: absolute;
+	top: 100px;
+	overflow-y: scroll;
+
+}
+
+.central-pane-title {
+	font-family: Helvetica Neue;
+	font-weight: 100;
+	font-size: 36px;
+	line-height: 80px;
+	padding: 40px;
+}
+
+ul {
+	padding: 0px;
+	margin: 0px 20px 0px 40px;
+	list-style: none;
+}
+
+li {
+	font-family: Avenir;
+	font-weight: 300;
+	font-size: 18px;
+	border: 4px solid var(--tertiary);
+	border-radius: 6px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+li img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+}
+.post-author {
+	font-family: Helvetica Neue;
+	font-weight: 100;
+	text-align: right;
+	position: absolute;
+	right: 34px;
+}
+.go-to-settings {
+	color: var(--accent);
+	cursor: hand;
+	cursor: pointer;
+}
+.go-to-settings:hover {
+	color: var(--hover);
+}
+.hidden {
+	display: none;
+}
+.swatch {
+	padding: 10px;
+	margin: 5px;
+	line-height: 40px;
+	border: 2px solid var(--secondary);
+}
+.swatch-yellow {background-color: yellow;}
+.swatch-blue {background-color: blue;}
+.swatch-red {background-color: red;}
+.swatch-purple {background-color: purple;}
+.swatch-green {background-color: green;}
+.swatch-orange {background-color: orange;}
+.swatch-normal {background-color: pink;}
+
+.border-selected {
+	border: 2px solid var(--accent);
+}
+.setting {
+	border: 4px solid var(--tertiary);
+	border-radius: 6px;
+	padding: 10px;
+	margin-left: 40px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	font-family: Avenir;
+	font-size: 18px;
+}
+#update-settings {
+	font-size: 24px;
+	font-family: Helvetica Neue;
+	font-weight: 100;
+	background-color: var(--tertiary);
+	border: 4px solid var(--primary);
+	border-radius: 6px;
+	width: 200px;
+	margin-left: 80px;
+	box-sizing: border-box;
+	color: var(--primary);
+	cursor: hand;
+	cursor: pointer;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+#update-settings:active {
+	background-color: var(--accent);
+}
+#change-name {
+	padding: 10px;
+	border: 4px solid var(--primary);
+	border-radius: 6px;
+	font-size: 16px;
+	font-family: Helvetica Neue;
+	font-weight: 300;
+}
+
+#log-in-pane {
+	background-color: var(--tertiary);
+	height: 600px;
+	width: 400px;
+	z-index: 100;
+	margin: 100px auto;
+	box-sizing: border-box;
+	padding: 40px 0px;
+
+}
+#log-in-pane input {
+	border-radius: 60px;
+	border: 4px solid var(--secondary);
+	padding: 10px 40px;
+	font-size: 26px;
+	width: 300px;
+	margin: 0px;
+	box-sizing: border-box;
+	margin-left: 50px;
+	font-family: Avenir;
+	background-color: var(--primary);
+	color: var(--hover);
+}
+#log-in-pane label p{
+	font-family: helvetica neue;
+	font-weight: 100;
+	font-size: 36px;
+	text-align: center;
+	padding: 0px;
+	margin: 10px 0px;
+	color: var(--primary);
+
+}
+#submit-log-in {
+	font-family: Helvetica Neue;
+	font-weight: 800;
+	font-size: 24px;
+	border: 4px solid var(--secondary);
+	border-radius: 60px;
+	width: 200px;
+	height: 60px;
+	margin-left: 100px;
+	margin-top: 40px;
+	box-sizing: border-box;
+	cursor: hand;
+	cursor: pointer;
+	background-color: var(--accent);
+}
+#submit-log-in:active {
+	background-color: var(--hover);
+}
+#hint {
+	font-size: 30px;
+	font-family: helvetica neue;
+	font-weight: 100;
+	text-align: center;
+}
+#external-post {
+	position: absolute;
+	top: 100px;
+	left: 40px;
+	box-sizing: border-box;
+	height: 80px;
+	width: 300px;
+	padding: 10px;
+	background-color: var(--accent);
+	border: 4px solid var(--secondary);
+	border-radius: 50px;
+	font-size: 18px;
+	line-height: 40px;
+	font-family: Avenir;
+	font-weight: 900;
+	cursor: hand;
+	cursor: pointer;
+	transition: all .5s;
+	color: var(--tertiary);
+}
+#external-post:hover {
+	border-color: var(--hover);
+	background-color: var(--secondary);
+	color: var(--hover);
+}
